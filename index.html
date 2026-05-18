@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Blackbird Building Group</title>
+  <meta name="description" content="Blackbird Building Group — bespoke residential construction, architectural carpentry and refined building work." />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="hero" id="home">
+    <video class="hero-video" autoplay muted loop playsinline preload="metadata" poster="assets/private-jetty.jpeg">
+      <source src="assets/hero-video.mp4" type="video/mp4" />
+    </video>
+    <div class="hero-shade"></div>
+
+    <nav class="nav" aria-label="Primary navigation">
+      <a class="nav-mark" href="#home" aria-label="Blackbird Building Group home">
+        <img src="assets/blackbird-feather-white.png" alt="Blackbird feather logo" />
+      </a>
+      <div class="nav-links">
+        <a href="#about">About</a>
+        <a href="#work">Work</a>
+        <a href="#services">Services</a>
+        <a href="#contact">Enquire</a>
+      </div>
+    </nav>
+
+    <div class="hero-logo" aria-label="Blackbird Building Group">
+      <img class="logo-main" src="assets/blackbird-main-logo-white.png" alt="Blackbird Building Group logo" />
+    </div>
+
+    <a class="scroll-cue" href="#about" aria-label="Scroll to content">Scroll</a>
+  </header>
+
+  <main>
+    <section id="about" class="intro-section">
+      <div class="intro-copy">
+        <p class="eyebrow">Blackbird Building Group</p>
+        <h1>Refined building for considered homes.</h1>
+        <p>
+          Bespoke residential construction, architectural carpentry and detailed exterior works
+          delivered with calm precision, strong communication and a high-end finish.
+        </p>
+      </div>
+    </section>
+
+    <section id="work" class="projects-section">
+      <div class="section-heading">
+        <p class="eyebrow">Selected Work</p>
+        <h2>Project galleries</h2>
+        
+      </div>
+      <div class="project-grid">
+        
+        <article class="project-card" data-project="deck-stair-balustrade" tabindex="0">
+          <div class="project-thumb"><img src="assets/projects/deck-stair-balustrade/DSC00146.jpg" alt="Deck, Stair & Balustrade Works"></div>
+          <div class="project-meta">
+            <span>13 photos</span>
+            <h3>Deck, Stair & Balustrade Works</h3>
+            <p>External timber stair construction, decking and balustrade carpentry.</p>
+          </div>
+        </article>
+
+
+        <article class="project-card" data-project="wine-cellar-detail" tabindex="0">
+          <div class="project-thumb"><img src="assets/projects/wine-cellar-detail/DSC00097.jpg" alt="Wine Cellar Joinery & Detail"></div>
+          <div class="project-meta">
+            <span>3 photos</span>
+            <h3>Wine Cellar Joinery & Detail</h3>
+            <p>Warm architectural shelving, curved forms and integrated lighting.</p>
+          </div>
+        </article>
+
+
+        <article class="project-card" data-project="waterfront-jetty" tabindex="0">
+          <div class="project-thumb"><img src="assets/projects/waterfront-jetty/IMG_5700.jpg" alt="Waterfront Jetty Works"></div>
+          <div class="project-meta">
+            <span>3 photos</span>
+            <h3>Waterfront Jetty Works</h3>
+            <p>Marine timber works and waterfront access upgrades.</p>
+          </div>
+        </article>
+
+
+        <article class="project-card" data-project="workshop-craft" tabindex="0">
+          <div class="project-thumb"><img src="assets/projects/workshop-craft/DSC00032.jpg" alt="Craftsmanship in Progress"></div>
+          <div class="project-meta">
+            <span>1 photos</span>
+            <h3>Craftsmanship in Progress</h3>
+            <p>On-site carpentry, detailing and material preparation.</p>
+          </div>
+        </article>
+
+      </div>
+    </section>
+
+    <section class="services-section">
+      <div>
+        <p class="eyebrow">Services</p>
+        <h2>Built around detail.</h2>
+      </div>
+      <div class="service-list">
+        <p>Architectural carpentry</p>
+        <p>Decks, stairs & balustrades</p>
+        <p>Residential renovations</p>
+        <p>Outdoor living spaces</p>
+        <p>Custom timber works</p>
+      </div>
+    </section>
+
+    <section id="contact" class="contact-section">
+      <div class="contact-copy">
+        <p class="eyebrow">Enquiries</p>
+        <h2>Begin your project.</h2>
+        <p>Tell us about the work you have in mind and we’ll come back to you.</p>
+      </div>
+      <form class="contact-form" action="https://formspree.io/f/your-form-id" method="POST">
+        <input name="name" type="text" placeholder="Name" required>
+        <input name="email" type="email" placeholder="Email" required>
+        <input name="phone" type="tel" placeholder="Phone">
+        <textarea name="message" placeholder="Project details" required></textarea>
+        <button type="submit">Send enquiry</button>
+        <small>Replace the Formspree ID in index.html to send enquiries to bailey@blackbirdbuildinggroup.com.au.</small>
+      </form>
+    </section>
+  </main>
+
+  <div class="lightbox" id="lightbox" aria-hidden="true">
+    <button class="lightbox-close" aria-label="Close gallery">×</button>
+    <button class="lightbox-prev" aria-label="Previous image">‹</button>
+    <div class="lightbox-inner">
+      <div class="lightbox-copy">
+        <p class="eyebrow" id="gallery-count">Project Gallery</p>
+        <h3 id="gallery-title"></h3>
+        <p id="gallery-subtitle"></p>
+      </div>
+      <img id="gallery-image" src="" alt="">
+      <div class="thumb-row" id="thumb-row"></div>
+    </div>
+    <button class="lightbox-next" aria-label="Next image">›</button>
+  </div>
+
+  <script>
+    window.BLACKBIRD_PROJECTS = [{"slug": "deck-stair-balustrade", "title": "Deck, Stair & Balustrade Works", "subtitle": "External timber stair construction, decking and balustrade carpentry.", "cover": "assets/projects/deck-stair-balustrade/DSC00146.jpg", "images": ["assets/projects/deck-stair-balustrade/DSC00039.jpg", "assets/projects/deck-stair-balustrade/DSC00045.jpg", "assets/projects/deck-stair-balustrade/DSC00048.jpg", "assets/projects/deck-stair-balustrade/DSC00069.jpg", "assets/projects/deck-stair-balustrade/DSC00105.jpg", "assets/projects/deck-stair-balustrade/DSC00110.jpg", "assets/projects/deck-stair-balustrade/DSC00124.jpg", "assets/projects/deck-stair-balustrade/DSC00127.jpg", "assets/projects/deck-stair-balustrade/DSC00139.jpg", "assets/projects/deck-stair-balustrade/DSC00144.jpg", "assets/projects/deck-stair-balustrade/DSC00146.jpg", "assets/projects/deck-stair-balustrade/5AF4A256-80A4-494D-AC33-7B79150F4310.jpg", "assets/projects/deck-stair-balustrade/616AA621-5077-448B-91B5-C94F47082BE6.jpg"]}, {"slug": "wine-cellar-detail", "title": "Wine Cellar Joinery & Detail", "subtitle": "Warm architectural shelving, curved forms and integrated lighting.", "cover": "assets/projects/wine-cellar-detail/DSC00097.jpg", "images": ["assets/projects/wine-cellar-detail/DSC00097.jpg", "assets/projects/wine-cellar-detail/DSC00101.jpg", "assets/projects/wine-cellar-detail/A51CCA19-DCBD-41A4-8730-2AAA250E8D34.jpg"]}, {"slug": "waterfront-jetty", "title": "Waterfront Jetty Works", "subtitle": "Marine timber works and waterfront access upgrades.", "cover": "assets/projects/waterfront-jetty/IMG_5700.jpg", "images": ["assets/projects/waterfront-jetty/IMG_5700.jpg", "assets/projects/waterfront-jetty/IMG_2688.jpg", "assets/projects/waterfront-jetty/D3BCABF5-B7B5-490F-AFEF-51682216212C.jpg"]}, {"slug": "workshop-craft", "title": "Craftsmanship in Progress", "subtitle": "On-site carpentry, detailing and material preparation.", "cover": "assets/projects/workshop-craft/DSC00032.jpg", "images": ["assets/projects/workshop-craft/DSC00032.jpg"]}];
+  </script>
+  <script src="script.js"></script>
+</body>
+</html>

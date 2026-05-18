@@ -1,1 +1,1 @@
-# Blackbird-final
+This version includes the exact original title page plus the full website, grouped project galleries, and black contact form placeholders.
